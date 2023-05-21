@@ -5,9 +5,9 @@ services:
     image: teslamate/teslamate:latest
     restart: always
     environment:
-      - ENCRYPTION_KEY=${ENCRYPTION_KEY}
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY:-r15jVKyTpIytKkuC1WhAiIVx}
       - DATABASE_USER=teslamate
-      - DATABASE_PASS=${DATABASE_PASS}
+      - DATABASE_PASS=${DATABASE_PASS:-eKf1h1QBKvhRctoZwI7rdVER}
       - DATABASE_NAME=teslamate
       - DATABASE_HOST=database
       - MQTT_HOST=mosquitto
@@ -23,7 +23,7 @@ services:
     restart: always
     environment:
       - POSTGRES_USER=teslamate
-      - POSTGRES_PASSWORD=${DATABASE_PASS}
+      - POSTGRES_PASSWORD=${DATABASE_PASS:-eKf1h1QBKvhRctoZwI7rdVER}
       - POSTGRES_DB=teslamate
     volumes:
       - teslamate-db:/var/lib/postgresql/data
@@ -33,7 +33,7 @@ services:
     restart: always
     environment:
       - DATABASE_USER=teslamate
-      - DATABASE_PASS=${DATABASE_PASS}
+      - DATABASE_PASS=${DATABASE_PASS:-eKf1h1QBKvhRctoZwI7rdVER}
       - DATABASE_NAME=teslamate
       - DATABASE_HOST=database
     ports:
