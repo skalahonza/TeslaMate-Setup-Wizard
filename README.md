@@ -9,6 +9,10 @@ allowing you to quickly harness the power of TeslaMate and gain valuable insight
 
 # Getting started
 1. Clone this repo (or download zip)
-2. Open your terminal
-3. Run `./setup.sh`
-4. Open the web interface http://localhost:4000
+2. Install [Docker](https://www.docker.com/products/docker-desktop/)
+3. Open your terminal
+4. Run `docker-compose up -d`
+5. Open the web interface http://localhost:4000
+6. Add Tesla Access Token and Tesla Refresh Token
+7. Go to http://localhost:3000
+8. Use admin admin as default credentials
